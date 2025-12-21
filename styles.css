@@ -20,6 +20,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+.sticky-buttons {
+    position: fixed;
+    top: 70px; /* below navbar */
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem; /* icon and text spacing */
+    padding: 0%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.1);
+    display: none; /* hidden by default */
+}
+
+.sticky-buttons.show {
+    display: flex;
+    border-radius: 10px;
+}
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

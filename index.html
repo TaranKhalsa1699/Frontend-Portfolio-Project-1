@@ -1,43 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taranpreet Singh - Python Backend Developer Specializing in AI-Enhanced Cybersecurity</title>
-    <meta name="description" content="Taranpreet Singh - Professional Python Backend Developer specializing in Django, FastAPI, Machine Learning, and Cybersecurity. Explore my portfolio of innovative projects and technical solutions.">
-    <meta name="keywords" content="Python Developer, Django, FastAPI, Backend Development, Machine Learning, Cybersecurity, REST APIs, Taranpreet Singh">
+    <title>Taranpreet Singh - Python Backend Developer</title>
+    <meta name="description"
+        content="Taranpreet Singh - Python Backend Developer specializing in Django, FastAPI, ML, and Cybersecurity">
+    <meta name="keywords"
+        content="Python Developer, Django, FastAPI, Backend Development, Machine Learning, Cybersecurity">
     <meta name="author" content="Taranpreet Singh">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Taranpreet Singh - AI Python Backend Developer">
-    <meta property="og:description" content="Professional portfolio showcasing Python backend development, machine learning, and cybersecurity projects">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tarankhalsa1699.github.io/My-Portfolio/">
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
-    
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
-</head>
-<body>
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-        <i class="fas fa-moon" id="theme-icon"></i>
-    </button>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Sticky Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #1e293b;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #7c3aed;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-text {
+            flex: 1 1 500px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p.subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #475569;
+        }
+
+        .hero-text p.description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #64748b;
+            margin-bottom: 2rem;
+        }
+
+        /* Buttons Horizontal */
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #7c3aed;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5b21b6;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            flex: 1 1 400px;
+            text-align: center;
+        }
+
+        .profile-img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        @media(max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                margin-bottom: 2rem;
+            }
+
+            .btn-group {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <div class="logo">
-                <h3 style="background: linear-gradient(135deg, #2563eb, #7c3aed); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">TS</h3>
+                <h3
+                    style="background: linear-gradient(135deg, #2563eb, #7c3aed); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">
+                    TS</h3>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -51,34 +188,51 @@
         </div>
     </nav>
 
+
+
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Taranpreet Singh</h1>
-                <p class="subtitle">AI Python Backend Developer & Cybersecurity Expert</p>
-                <p class="description">
-                    Passionate Python backend developer specializing in building secure, scalable APIs and ML-powered solutions. 
-                    With expertise in Django, FastAPI, and cybersecurity, I transform complex problems into elegant code solutions 
-                    that drive real business value and enhance digital security.
-                </p>
-                <div class="btn-group">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i> Get In Touch
-                    </a>
-                    <a href="https://github.com/TaranKhalsa1699" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-github"></i> View GitHub
-                    </a>
-                    <a href="#" class="btn btn-secondary" onclick="downloadResume()">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://tarankhalsa1699.github.io/images/profile1.jpeg" alt="Taranpreet Singh" class="profile-img">
+        <div class="hero-text">
+            <h1>Taranpreet Singh</h1>
+            <p class="subtitle">Developed ML-powered password security tools and production APIs | Open to Internships &
+                Collaborations 🚀</p>
+            <p class="description">
+                Passionate Python backend developer specializing in building secure, scalable APIs and ML-powered
+                solutions.
+                With expertise in Django, FastAPI, and cybersecurity, I transform complex problems into elegant code
+                solutions
+                that drive real business value and enhance digital security.
+            </p>
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+                <a href="https://github.com/TaranKhalsa1699" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-github"></i> View GitHub
+                </a>
+                <a href="Taranpreet_Singh_Python_Backend_Developer_Resume.pdf" class="btn btn-secondary" download>
+                    <i class="fas fa-download"></i> Download CV
+                </a>
             </div>
         </div>
+        <div class="hero-image">
+            <img src="images/profile1.jpeg" alt="Taranpreet Singh" class="profile-img">
+        </div>
     </section>
+
+
+    <!-- Sticky Buttons -->
+    <div class="sticky-buttons" id="stickyButtons">
+        <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> Get In Touch
+        </a>
+        <a href="https://github.com/TaranKhalsa1699" target="_blank" class="btn btn-secondary">
+            <i class="fab fa-github"></i> View GitHub
+        </a>
+        <a href="Taranpreet_Singh_Python_Backend_Developer_Resume.pdf" class="btn btn-secondary" download>
+            <i class="fas fa-download"></i> Download CV
+        </a>
+    </div>
 
     <!-- Stats Section -->
     <section class="stats">
@@ -107,481 +261,508 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 0 2rem;">
             <p style="font-size: 1.2rem; line-height: 1.8; color: #64748b; margin-bottom: 2rem;">
-                I'm a dedicated Python backend developer with a strong foundation in Computer Science (AI & Data Science) 
-                and a passion for cybersecurity. My journey in tech has been driven by curiosity and the desire to build 
-                solutions that make a real impact.
+                I'm a Python backend developer passionate about blending AI and cybersecurity to build systems that are
+                secure, fast, and actually useful. During my 5-month internship at Webpaint Technology, I developed 12+
+                production REST APIs using Django and FastAPI, optimized SQL queries to cut response times by 15-30%,
+                and implemented JWT authentication with OWASP-compliant protections. My favourite project: an
+                ML-enhanced Password Security API trained on 50,000+ leaked passwords that detects weak passwords ~20%
+                better than traditional rules. Currently open to internships and collaborations where I can keep
+                building smart, secure solutions that solve real problems.
             </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                <div class="card" style="padding: 1.5rem; border-radius: 15px; background: white; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
+                <div class="card"
+                    style="padding: 1.5rem; border-radius: 15px; background: white; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                     <i class="fas fa-graduation-cap" style="font-size: 2rem; color: #2563eb; margin-bottom: 1rem;"></i>
                     <h4 style="margin-bottom: 0.5rem;">Education</h4>
-                    <p style="color: #64748b; font-size: 0.9rem;">B.Sc. Computer Science<br>(AI & Data Science)</p>
+                    <p style="color: #64748b; font-size: 0.9rem;">
+                        B.Sc. (Hons) Artificial Intelligence<br>& Data Science<br>
+                        <span style="font-size: 0.85rem; opacity: 0.8;">SGTB Khalsa College<br>CGPA: 7.63 | 2024</span>
+                    </p>
                 </div>
-                <div class="card" style="padding: 1.5rem; border-radius: 15px; background: white; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+                <div class="card"
+                    style="padding: 1.5rem; border-radius: 15px; background: white; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                     <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: #2563eb; margin-bottom: 1rem;"></i>
                     <h4 style="margin-bottom: 0.5rem;">Location</h4>
                     <p style="color: #64748b; font-size: 0.9rem;">Punjab, India</p>
                 </div>
-                <div class="card" style="padding: 1.5rem; border-radius: 15px; background: white; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+                <div class="card"
+                    style="padding: 1.5rem; border-radius: 15px; background: white; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                     <i class="fas fa-briefcase" style="font-size: 2rem; color: #2563eb; margin-bottom: 1rem;"></i>
-                    <h4 style="margin-bottom: 0.5rem;">Status</h4>
-                    <p style="color: #64748b; font-size: 0.9rem;">Available for<br>Freelance Projects</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-header">
-                    <span class="skill-name"><i class="fab fa-python"></i> Python</span>
-                    <span class="skill-percentage">90%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 90%;"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-header">
-                    <span class="skill-name"><i class="fas fa-code"></i> Django / DRF</span>
-                    <span class="skill-percentage">85%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 85%;"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-header">
-                    <span class="skill-name"><i class="fas fa-bolt"></i> FastAPI</span>
-                    <span class="skill-percentage">80%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 80%;"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-header">
-                    <span class="skill-name"><i class="fas fa-plug"></i> REST APIs / JWT / OAuth2</span>
-                    <span class="skill-percentage">85%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 85%;"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-header">
-                    <span class="skill-name"><i class="fas fa-database"></i> PostgreSQL / MySQL</span>
-                    <span class="skill-percentage">80%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 80%;"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-header">
-                    <span class="skill-name"><i class="fas fa-brain"></i> Machine Learning (Scikit-Learn)</span>
-                    <span class="skill-percentage">75%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 75%;"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-header">
-                    <span class="skill-name"><i class="fas fa-chart-bar"></i> Pandas / NumPy</span>
-                    <span class="skill-percentage">85%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 85%;"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-header">
-                    <span class="skill-name"><i class="fab fa-git-alt"></i> Git / Docker / Linux</span>
-                    <span class="skill-percentage">80%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 80%;"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2 class="section-title">Professional Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3 style="color: #2563eb; margin-bottom: 0.5rem;">Python Developer Intern</h3>
-                    <h4 style="color: #7c3aed; margin-bottom: 1rem;">Webpaint Technology Pvt Ltd</h4>
-                    <p style="color: #64748b; margin-bottom: 1rem;">March 2025 – July 2025</p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Developed 12+ REST APIs using Django, DRF, and FastAPI</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Implemented JWT authentication and secure hashing techniques</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Optimized SQL queries improving API performance by 15-30%</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Designed backend modules for live client projects</li>
-                        <li><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Collaborated in weekly sprints with documentation and testing</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3 style="color: #2563eb; margin-bottom: 0.5rem;">Backend / ML Projects Developer</h3>
-                    <h4 style="color: #7c3aed; margin-bottom: 1rem;">Freelance & Self-Driven Projects</h4>
-                    <p style="color: #64748b; margin-bottom: 1rem;">2024 – Present</p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Built ML-enhanced Password Security API with 20% accuracy improvement</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Created Secure Blog Backend using Django REST Framework with JWT</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Developed real-time Password Strength Checker using Streamlit</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Integrated multiple databases (PostgreSQL, MySQL, MongoDB)</li>
-                        <li><i class="fas fa-check" style="color: #10b981; margin-right: 0.5rem;"></i> Worked on automation, Docker deployments, and CI/CD workflows</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="https://tarankhalsa1699.github.io/images/project-ml.png" alt="ML Password Security API" class="project-image">
-                <div class="project-content">
-                    <h3 class="project-title">ML-Enhanced Password Security API</h3>
-                    <p class="project-description">
-                        Advanced password strength classification system trained on 50,000+ leaked passwords, 
-                        achieving superior accuracy compared to traditional regex-based validation methods.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Scikit-Learn</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">Machine Learning</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="fas fa-code"></i> View Code
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <img src="https://tarankhalsa1699.github.io/images/project-blog.jpg" alt="Secure Blog Backend" class="project-image">
-                <div class="project-content">
-                    <h3 class="project-title">Secure Blog Platform Backend</h3>
-                    <p class="project-description">
-                        Robust blog management system built with Django REST Framework, featuring JWT authentication, 
-                        role-based access control, and secure API endpoints for content management.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Django</span>
-                        <span class="tech-tag">DRF</span>
-                        <span class="tech-tag">JWT</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="fas fa-code"></i> View Code
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> API Docs
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <img src="https://tarankhalsa1699.github.io/images/project-streamlit.jpg" alt="Password Strength Checker" class="project-image">
-                <div class="project-content">
-                    <h3 class="project-title">Password Strength Checker</h3>
-                    <p class="project-description">
-                        Interactive real-time password analysis tool built with Streamlit, providing instant feedback 
-                        on password security with visual strength indicators and improvement suggestions.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Streamlit</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Data Visualization</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="fas fa-code"></i> View Code
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-play"></i> Try It Live
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <img src="https://tarankhalsa1699.github.io/images/project-jarvis.jpg" alt="JARVIS AI Assistant" class="project-image">
-                <div class="project-content">
-                    <h3 class="project-title">JARVIS-X AI Desktop Assistant</h3>
-                    <p class="project-description">
-                        Intelligent desktop automation assistant powered by AI, capable of handling voice commands, 
-                        system operations, and providing personalized user interactions.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">NLP</span>
-                        <span class="tech-tag">Speech Recognition</span>
-                        <span class="tech-tag">Automation</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="fas fa-code"></i> View Code
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-video"></i> Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <h2 class="section-title">Services I Offer</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div style="padding: 3rem 2rem; text-align: center;">
-                    <i class="fas fa-plug" style="font-size: 3rem; color: #2563eb; margin-bottom: 1.5rem;"></i>
-                    <h3 class="project-title">REST API Development</h3>
-                    <p class="project-description">
-                        Building secure, scalable APIs using Django REST Framework and FastAPI with 
-                        JWT authentication and role-based access control systems.
+                    <h4 style="margin-bottom: 0.5rem;">Availability</h4>
+                    <p style="color: #64748b; font-size: 0.9rem;">
+                        Open to Internships<br>& Entry-Level Roles<br>
+                        <span style="font-size: 0.85rem; opacity: 0.8;">AI/ML • Backend • Cybersecurity</span>
                     </p>
                 </div>
             </div>
-            
-            <div class="project-card">
-                <div style="padding: 3rem 2rem; text-align: center;">
-                    <i class="fas fa-server" style="font-size: 3rem; color: #2563eb; margin-bottom: 1.5rem;"></i>
-                    <h3 class="project-title">Backend Development</h3>
-                    <p class="project-description">
-                        Designing and developing robust backend systems, database models, authentication flows, 
-                        and business logic for production-ready applications.
+
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-code"></i> Django / DRF</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-bolt"></i> FastAPI</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-plug"></i> REST APIs / JWT / OAuth2</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-database"></i> PostgreSQL / MySQL</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-brain"></i> Machine Learning (Scikit-Learn)</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-chart-bar"></i> Pandas / NumPy</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fab fa-git-alt"></i> Git / Docker / Linux</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 style="color: #2563eb; margin-bottom: 0.5rem;">Python Developer Intern</h3>
+                            <h4 style="color: #7c3aed; margin-bottom: 1rem;">Webpaint Technology Pvt Ltd, Chandigarh
+                            </h4>
+                            <p style="color: #64748b; margin-bottom: 1rem;">March 2025 – July 2025</p>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                                        style="color: #10b981; margin-right: 0.5rem;"></i> Developed 6–10 backend
+                                    modules and 12+ secure REST APIs using Django and FastAPI for production
+                                    applications</li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                                        style="color: #10b981; margin-right: 0.5rem;"></i> Built JWT authentication,
+                                    input validation, and bcrypt hashing following OWASP guidelines</li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                                        style="color: #10b981; margin-right: 0.5rem;"></i> Optimized SQL queries,
+                                    reducing API response times by 15–30%</li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                                        style="color: #10b981; margin-right: 0.5rem;"></i> Designed scalable backend
+                                    services with structured error handling and security-focused architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 style="color: #2563eb; margin-bottom: 0.5rem;">Personal Projects & Hands-On Development
+                            </h3>
+                            <h4 style="color: #7c3aed; margin-bottom: 1rem;">AI + Cybersecurity Focused</h4>
+                            <p style="color: #64748b; margin-bottom: 1rem;">2024 – Present</p>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                                        style="color: #10b981; margin-right: 0.5rem;"></i> Built ML-Enhanced Password
+                                    Security API (FastAPI + Scikit-learn) trained on 50,000+ leaked passwords – ~20%
+                                    better weak password detection</li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                                        style="color: #10b981; margin-right: 0.5rem;"></i> Created Secure Blog Platform
+                                    with DRF, role-based JWT auth, and OWASP-compliant protections</li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                                        style="color: #10b981; margin-right: 0.5rem;"></i> Developed interactive
+                                    Password Strength Checker using Streamlit for real-time user education</li>
+                                <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                                        style="color: #10b981; margin-right: 0.5rem;"></i> Experimented with Docker,
+                                    CI/CD workflows, and multi-database integration (PostgreSQL, MySQL, MongoDB)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="images/project-ml1.png" alt="ML-Enhanced Password Security API" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">ML-Enhanced Password Security API (2025)</h3>
+                            <p class="project-description">
+                                Built FastAPI backend to classify password strength using Random Forest model trained on
+                                50,000+ leaked passwords.
+                                Combined regex, entropy analysis, and ML for ~20% better weak password detection.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/TaranKhalsa1699/Ml-Password-Security-Api.git"
+                                    class="project-link" target="_blank">
+                                    <i class="fas fa-code"></i> View Code
+                                </a>
+                                <a href="https://ml-password-security-api.onrender.com/" class="project-link"
+                                    target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> View API
+                                </a>
+                                <a href="https://ml-password-security-api.onrender.com/docs" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> API Docs
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="images/project-blog.png"
+                            alt="Secure Blog Platform API" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Secure Blog Platform API (2025)</h3>
+                            <p class="project-description">
+                                Developed RESTful CRUD APIs with DRF, PostgreSQL, and JWT role-based auth.
+                                Added bcrypt hashing, SQLi/XSS protection per OWASP guidelines for secure request
+                                handling.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Django REST Framework</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">OWASP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/TaranKhalsa1699/Secure-Blog-Backend.git" class="project-link"
+                                    target="_blank">
+                                    <i class="fas fa-code"></i> View Code
+                                </a>
+                                <a href="https://secure-blog-backend.onrender.com/" class="project-link"
+                                    target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> View API
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="images/project-streamlit.png"
+                            alt="Password Strength Checker" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Password Strength Checker (2024)</h3>
+                            <p class="project-description">
+                                Created interactive Streamlit tool with regex-based rules to analyze and educate on
+                                secure password practices in real-time.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">Regex</span>
+                                <span class="tech-tag">Cybersecurity</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/TaranKhalsa1699/Password_Strength_Checker_Tool.git"
+                                    class="project-link" target="_blank">
+                                    <i class="fas fa-code"></i> View Code
+                                </a>
+                                <a href="https://passwordstrengthcheckertool-4qnuiwdgptgat3zbf2r2gm.streamlit.app/" class="project-link" target="_blank">
+                                    <i class="fas fa-play"></i> Try It Live
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services">
+                <h2 class="section-title">Services I Offer</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div style="padding: 3rem 2rem; text-align: center;">
+                            <i class="fas fa-plug" style="font-size: 3rem; color: #2563eb; margin-bottom: 1.5rem;"></i>
+                            <h3 class="project-title">REST API Development</h3>
+                            <p class="project-description">
+                                Building secure, scalable APIs using Django REST Framework and FastAPI with
+                                JWT authentication and role-based access control systems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div style="padding: 3rem 2rem; text-align: center;">
+                            <i class="fas fa-server"
+                                style="font-size: 3rem; color: #2563eb; margin-bottom: 1.5rem;"></i>
+                            <h3 class="project-title">Backend Development</h3>
+                            <p class="project-description">
+                                Designing and developing robust backend systems, database models, authentication flows,
+                                and business logic for production-ready applications.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div style="padding: 3rem 2rem; text-align: center;">
+                            <i class="fas fa-brain" style="font-size: 3rem; color: #2563eb; margin-bottom: 1.5rem;"></i>
+                            <h3 class="project-title">Machine Learning Solutions</h3>
+                            <p class="project-description">
+                                Creating ML-powered tools using Scikit-Learn, including password strength prediction
+                                models,
+                                classification systems, and intelligent automation solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div style="padding: 3rem 2rem; text-align: center;">
+                            <i class="fas fa-database"
+                                style="font-size: 3rem; color: #2563eb; margin-bottom: 1.5rem;"></i>
+                            <h3 class="project-title">Database & Deployment</h3>
+                            <p class="project-description">
+                                Designing and managing PostgreSQL/MySQL databases, containerizing applications with
+                                Docker,
+                                and deploying projects on cloud platforms with CI/CD workflows.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2 class="section-title">Get In Touch</h2>
+                <div style="text-align: center; max-width: 600px; margin: 0 auto; padding: 0 2rem;">
+                    <p style="font-size: 1.2rem; color: #64748b; margin-bottom: 3rem;">
+                        I'm always open to discussing new opportunities, interesting projects, or tech collaborations.
+                        Feel free to reach out anytime!
                     </p>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div style="padding: 3rem 2rem; text-align: center;">
-                    <i class="fas fa-brain" style="font-size: 3rem; color: #2563eb; margin-bottom: 1.5rem;"></i>
-                    <h3 class="project-title">Machine Learning Solutions</h3>
-                    <p class="project-description">
-                        Creating ML-powered tools using Scikit-Learn, including password strength prediction models, 
-                        classification systems, and intelligent automation solutions.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div style="padding: 3rem 2rem; text-align: center;">
-                    <i class="fas fa-database" style="font-size: 3rem; color: #2563eb; margin-bottom: 1.5rem;"></i>
-                    <h3 class="project-title">Database & Deployment</h3>
-                    <p class="project-description">
-                        Designing and managing PostgreSQL/MySQL databases, containerizing applications with Docker, 
-                        and deploying projects on cloud platforms with CI/CD workflows.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div style="text-align: center; max-width: 600px; margin: 0 auto; padding: 0 2rem;">
-            <p style="font-size: 1.2rem; color: #64748b; margin-bottom: 3rem;">
-                I'm always open to discussing new opportunities, interesting projects, or tech collaborations. 
-                Feel free to reach out anytime!
-            </p>
-            
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                    <form class="contact-form" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required
+                                placeholder="Project Discussion / Collaboration">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required
+                                placeholder="Tell me about your project or idea..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
                 </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/tarankhalsa1699" target="_blank" class="social-link"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/TaranKhalsa1699" target="_blank" class="social-link"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:singhpunjabkaur1699@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+919115617740" class="social-link" aria-label="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+
+                    <p style="margin-bottom: 2rem;">Let's build something amazing together!</p>
+
+                    <div style="padding: 2rem 0; border-top: 1px solid #334155; margin-top: 2rem;">
+                        <p>&copy; 2024 Taranpreet Singh. All Rights Reserved.</p>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
+                            <a href="#" style="color: inherit; margin: 0 1rem; text-decoration: none;">Privacy
+                                Policy</a>
+                            <a href="#" style="color: inherit; margin: 0 1rem; text-decoration: none;">Terms of Use</a>
+                            <a href="#contact"
+                                style="color: inherit; margin: 0 1rem; text-decoration: none;">Contact</a>
+                        </p>
+                    </div>
                 </div>
-                
-                <div class="form-group">
-                    <label for="subject">Subject *</label>
-                    <input type="text" id="subject" name="subject" required placeholder="Project Discussion / Collaboration">
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" required placeholder="Tell me about your project or idea..."></textarea>
-                </div>
-                
-                <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    <i class="fas fa-paper-plane"></i> Send Message
-                </button>
-            </form>
-        </div>
-    </section>
+            </footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/tarankhalsa1699" target="_blank" class="social-link" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/TaranKhalsa1699" target="_blank" class="social-link" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:singhpunjabkaur1699@gmail.com" class="social-link" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="tel:+919115617740" class="social-link" aria-label="Phone">
-                    <i class="fas fa-phone"></i>
-                </a>
-            </div>
-            
-            <p style="margin-bottom: 2rem;">Let's build something amazing together!</p>
-            
-            <div style="padding: 2rem 0; border-top: 1px solid #334155; margin-top: 2rem;">
-                <p>&copy; 2024 Taranpreet Singh. All Rights Reserved.</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
-                    <a href="#" style="color: inherit; margin: 0 1rem; text-decoration: none;">Privacy Policy</a>
-                    <a href="#" style="color: inherit; margin: 0 1rem; text-decoration: none;">Terms of Use</a>
-                    <a href="#contact" style="color: inherit; margin: 0 1rem; text-decoration: none;">Contact</a>
-                </p>
-            </div>
-        </div>
-    </footer>
+            <!-- JavaScript -->
+            <script>
+                // Theme Toggle
+                function toggleTheme() {
+                    const body = document.body;
+                    const icon = document.getElementById('theme-icon');
 
-    <!-- JavaScript -->
-    <script>
-        // Theme Toggle
-        function toggleTheme() {
-            const body = document.body;
-            const icon = document.getElementById('theme-icon');
-            
-            body.classList.toggle('dark-mode');
-            
-            if (body.classList.contains('dark-mode')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-                localStorage.setItem('theme', 'light');
-            }
-        }
+                    body.classList.toggle('dark-mode');
 
-        // Load saved theme
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                document.getElementById('theme-icon').classList.remove('fa-moon');
-                document.getElementById('theme-icon').classList.add('fa-sun');
-            }
-
-            // Animate stats
-            animateStats();
-            
-            // Animate skills on scroll
-            animateSkillsOnScroll();
-        });
-
-        // Animate statistics numbers
-        function animateStats() {
-            const stats = document.querySelectorAll('.stat-number');
-            
-            stats.forEach(stat => {
-                const target = parseInt(stat.getAttribute('data-count'));
-                const duration = 2000; // 2 seconds
-                const step = target / (duration / 16); // 60 FPS
-                let current = 0;
-                
-                const timer = setInterval(() => {
-                    current += step;
-                    if (current >= target) {
-                        stat.textContent = target + '+';
-                        clearInterval(timer);
+                    if (body.classList.contains('dark-mode')) {
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                        localStorage.setItem('theme', 'dark');
                     } else {
-                        stat.textContent = Math.floor(current) + '+';
+                        icon.classList.remove('fa-sun');
+                        icon.classList.add('fa-moon');
+                        localStorage.setItem('theme', 'light');
                     }
-                }, 16);
-            });
-        }
+                }
 
-        // Animate skills on scroll
-        function animateSkillsOnScroll() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const skillBars = entry.target.querySelectorAll('.skill-progress');
-                        skillBars.forEach(bar => {
-                            bar.style.animation = 'progressAnimation 2s ease forwards';
-                        });
+                // Load saved theme
+                document.addEventListener('DOMContentLoaded', function () {
+                    const savedTheme = localStorage.getItem('theme');
+                    if (savedTheme === 'dark') {
+                        document.body.classList.add('dark-mode');
+                        document.getElementById('theme-icon').classList.remove('fa-moon');
+                        document.getElementById('theme-icon').classList.add('fa-sun');
                     }
+
+                    // Animate stats
+                    animateStats();
+
+                    // Animate skills on scroll
+                    animateSkillsOnScroll();
                 });
-            });
 
-            const skillsSection = document.querySelector('#skills');
-            if (skillsSection) {
-                observer.observe(skillsSection);
-            }
-        }
+                // Animate statistics numbers
+                function animateStats() {
+                    const stats = document.querySelectorAll('.stat-number');
 
-        // Handle form submission
-        function handleSubmit(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData);
-            
-            // Create email content
-            const subject = encodeURIComponent(data.subject);
-            const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`);
-            
-            // Open email client
-            window.location.href = `mailto:singhpunjabkaur1699@gmail.com?subject=${subject}&body=${body}`;
-            
-            // Show success message
-            showNotification('Message sent successfully! I\'ll get back to you soon.');
-            
-            // Reset form
-            event.target.reset();
-        }
+                    stats.forEach(stat => {
+                        const target = parseInt(stat.getAttribute('data-count'));
+                        const duration = 2000; // 2 seconds
+                        const step = target / (duration / 16); // 60 FPS
+                        let current = 0;
 
-        // Download resume function
-        function downloadResume() {
-            // Create a sample resume download
-            showNotification('Resume download started! Check your downloads folder.');
-            
-            // You can implement actual resume download here
-            // window.location.href = 'path-to-resume.pdf';
-        }
+                        const timer = setInterval(() => {
+                            current += step;
+                            if (current >= target) {
+                                stat.textContent = target + '+';
+                                clearInterval(timer);
+                            } else {
+                                stat.textContent = Math.floor(current) + '+';
+                            }
+                        }, 16);
+                    });
+                }
 
-        // Show notification
-        function showNotification(message) {
-            const notification = document.createElement('div');
-            notification.style.cssText = `
+                // Animate skills on scroll
+                function animateSkillsOnScroll() {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const skillBars = entry.target.querySelectorAll('.skill-progress');
+                                skillBars.forEach(bar => {
+                                    bar.style.animation = 'progressAnimation 2s ease forwards';
+                                });
+                            }
+                        });
+                    });
+
+                    const skillsSection = document.querySelector('#skills');
+                    if (skillsSection) {
+                        observer.observe(skillsSection);
+                    }
+                }
+
+                // Handle form submission
+                function handleSubmit(event) {
+                    event.preventDefault();
+
+                    const formData = new FormData(event.target);
+                    const data = Object.fromEntries(formData);
+
+                    // Create email content
+                    const subject = encodeURIComponent(data.subject);
+                    const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`);
+
+                    // Open email client
+                    window.location.href = `mailto:singhpunjabkaur1699@gmail.com?subject=${subject}&body=${body}`;
+
+                    // Show success message
+                    showNotification('Message sent successfully! I\'ll get back to you soon.');
+
+                    // Reset form
+                    event.target.reset();
+                }
+
+                // Download resume function
+                function downloadResume() {
+                    // Create a sample resume download
+                    showNotification('Resume download started! Check your downloads folder.');
+
+                    // You can implement actual resume download here
+                    // window.location.href = 'path-to-resume.pdf';
+                }
+
+                // Show notification
+                function showNotification(message) {
+                    const notification = document.createElement('div');
+                    notification.style.cssText = `
                 position: fixed;
                 top: 20px;
                 right: 20px;
@@ -593,21 +774,21 @@
                 z-index: 10000;
                 animation: slideIn 0.3s ease;
             `;
-            notification.textContent = message;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 300);
-            }, 3000);
-        }
+                    notification.textContent = message;
 
-        // Add animation styles
-        const style = document.createElement('style');
-        style.textContent = `
+                    document.body.appendChild(notification);
+
+                    setTimeout(() => {
+                        notification.style.animation = 'slideOut 0.3s ease';
+                        setTimeout(() => {
+                            document.body.removeChild(notification);
+                        }, 300);
+                    }, 3000);
+                }
+
+                // Add animation styles
+                const style = document.createElement('style');
+                style.textContent = `
             @keyframes slideIn {
                 from {
                     transform: translateX(100%);
@@ -630,33 +811,50 @@
                 }
             }
         `;
-        document.head.appendChild(style);
+                document.head.appendChild(style);
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                // Smooth scrolling for navigation links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
                     });
-                }
-            });
-        });
+                });
 
-        // Add scroll effect to navigation
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(255, 255, 255, 0.98)';
-                nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                nav.style.background = 'rgba(255, 255, 255, 0.95)';
-                nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            }
-        });
-    </script>
+                // Add scroll effect to navigation
+                window.addEventListener('scroll', function () {
+                    const nav = document.querySelector('nav');
+                    if (window.scrollY > 100) {
+                        nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                        nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+                    } else {
+                        nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                        nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                    }
+                });
+            </script>
+            <script>
+                const stickyButtons = document.getElementById('stickyButtons');
+                const homeSection = document.getElementById('home');
+
+                window.addEventListener('scroll', () => {
+                    const scrollY = window.scrollY;
+                    const homeBottom = homeSection.offsetHeight;
+
+                    if (scrollY > homeBottom - 100) { // adjust 50 for smoother appearance
+                        stickyButtons.classList.add('show');
+                    } else {
+                        stickyButtons.classList.remove('show');
+                    }
+                });
+            </script>
+
 </body>
+
 </html>
